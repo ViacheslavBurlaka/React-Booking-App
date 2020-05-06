@@ -1,0 +1,68 @@
+$border: 3px solid #EFEFFA;
+
+.Loader {
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: calc(50% - 2rem);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  perspective: 800px;
+
+  span {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__one {
+    top: 0;
+    left: 0;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: $border;
+  }
+
+  &__two {
+    top: 0;
+    right: 0;
+    animation: rotate-two 1s linear infinite;
+    border-right: $border;
+  }
+
+  &__three {
+    bottom: 0;
+    right: 0;
+    animation: rotate-three 1s linear infinite;
+    border-top: $border;
+  }
+}
+
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
