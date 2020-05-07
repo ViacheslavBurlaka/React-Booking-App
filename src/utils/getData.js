@@ -9,7 +9,7 @@ export const getData = async () => {
     return await Client.getEntries({
       content_type: 'hotelRoom',
       // order by:
-      order: '-fields.price'
+      order: 'fields.price'
     });
   } catch (error) {
     console.log(error)
