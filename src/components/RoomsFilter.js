@@ -53,9 +53,12 @@ const RoomsFilter = ({data, handleChange, loading}) => {
           :
           <>
             <div className="Section">
-              <div className="cell">Room type:</div>
+              <div className="cell">
+                <label htmlFor="type">Room type:</label>
+              </div>
               <div className="cell">
                 <select
+                  id="type"
                   value={type}
                   name="type"
                   onChange={handleChange}
@@ -65,9 +68,12 @@ const RoomsFilter = ({data, handleChange, loading}) => {
               </div>
             </div>
             <div className="Section">
-              <div className="cell">Guests:</div>
+              <div className="cell">
+                <label htmlFor="guests">Guests:</label>
+              </div>
               <div className="cell">
                 <select
+                  id="guests"
                   value={capacity}
                   name="capacity"
                   onChange={handleChange}
@@ -88,10 +94,10 @@ const RoomsFilter = ({data, handleChange, loading}) => {
               </div>
             </div>
             <div className="Section">
-              <div className="cell">Room size:</div>
+              <div className="cell"><label htmlFor="size">Room size:</label></div>
               <div className="cell">
-                <input type="number" name="minSize" value={minSize} onChange={handleChange}/>
-                <input type="number" name="maxSize" value={maxSize} onChange={handleChange}/>
+                <input type="number" id="size" name="minSize" value={minSize} onChange={handleChange}/>
+                <input type="number" id="size" name="maxSize" value={maxSize} onChange={handleChange}/>
               </div>
             </div>
             <div className="Section">
